@@ -1,0 +1,97 @@
+﻿
+#block1 {
+    position: absolute;
+    right: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+#block2 {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#block3 {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#block4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#block5 {
+    position: absolute;
+    top: 80%;
+    right: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+}
+
+#block6 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#block7 {
+    position: absolute;
+    top: 90%;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#block-x {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#block-y {
+    position: absolute;
+    right: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    top: 88%;
+}
+
+.number-block {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}

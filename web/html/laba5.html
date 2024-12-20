@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приклад сторінки</title>
+    <link rel="stylesheet" href="../css/laba5.css">
+</head>
+
+<body>
+<div>
+    <div id="block4">
+        <p id="resultArea">Площа п'ятикутника буде тут</p>
+
+        <div id="inputForm">
+            <label for="numberInput">Введіть натуральне число:</label>
+            <input type="number" id="numberInput"  required>
+            <button onclick="reverseNumber()">Перевернути число</button>
+        </div>
+    </div>
+
+    <div id="block1">
+        <button onclick="swapBlocks()">Поміняти місцями блоки 2 і 5</button>
+    </div>
+
+    <div id="block2">
+        <p>Блок 2 </p>
+    </div>
+
+    <div id="block3">
+        <p>Блок 3</p>
+    </div>
+
+    <div id="block7">
+        <div id="block-1" class="number-block">Блок 1</div>
+        <div id="block-2" class="number-block">Блок 2</div>
+        <div id="block-3" class="number-block">Блок 3</div>
+        <div id="block-4" class="number-block">Блок 4</div>
+        <div id="block-5" class="number-block">Блок 5</div>
+        <div id="block-6" class="number-block">Блок 6</div>
+        <div id="block-7" class="number-block">Блок 7</div>
+
+        <label for="color-picker"></label>
+        <input type="color" id="color-picker">
+        <button onclick="changeBorderColor()" id="apply-color">Применить цвет</button>
+    </div>
+
+
+    <div id="block5">
+      
+    </div>
+
+    <div id="block6">
+        <p>Блок 6 дозволяє додати більше деталей. Наприклад, це може бути блок з відгуками клієнтів або контактною
+            інформацією.</p>
+    </div>
+
+    <div id="block-x">
+        <label for="sideLengthInput"></label><input type="number" id="sideLengthInput"
+                                                    placeholder="Введіть довжину сторони"/>
+        <button onclick="calculateArea()">Обчислити площу</button>
+
+    </div>
+
+    <div id="block-y">
+        <h1>"Ваша довіра — наша сила"</h1>
+    </div>
+</div>
+
+<script src="../laba5.js"></script>
+
+</body>
+</html>
