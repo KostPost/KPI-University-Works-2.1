@@ -2,23 +2,17 @@
     const block2 = document.getElementById('block2');
     const block5 = document.getElementById('block5');
 
-    // Копируем стили блоков
     const block2Styles = window.getComputedStyle(block2);
     const block5Styles = window.getComputedStyle(block5);
 
-    // Временный контейнер для хранения одного из блоков
     const temp = document.createElement('div');
 
-    // Копируем содержимое блока 2 в временный контейнер
     temp.innerHTML = block2.innerHTML;
 
-    // Копируем содержимое блока 5 в блок 2
     block2.innerHTML = block5.innerHTML;
 
-    // Копируем содержимое временного контейнера в блок 5
     block5.innerHTML = temp.innerHTML;
 
-    // Применяем одинаковые стили для блоков, чтобы они не изменили позиционирование
     block2.style.position = block2Styles.position;
     block2.style.top = block2Styles.top;
     block2.style.left = block2Styles.left;
@@ -30,26 +24,30 @@
     block5.style.left = block5Styles.left;
     block5.style.transform = block5Styles.transform;
 }
+
+const button = document.getElementById('swapButton');
+button.addEventListener('click', swapBlocks);
 window.onload = swapBlocks;
 
 
+
+
+
 function calculateArea() {
-    // Get the side length input value
     const sideLength = parseFloat(document.getElementById('sideLengthInput').value);
 
-    // Check if the input is a valid number
     if (isNaN(sideLength) || sideLength <= 0) {
         document.getElementById('resultArea').textContent = "Будь ласка, введіть дійсне значення для сторони.";
         return;
     }
 
-    // Formula for the area of a regular pentagon
-    const area = (1/4) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * Math.pow(sideLength, 2);
+    const area = (1 / 4) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * Math.pow(sideLength, 2);
 
-    // Display the result in the block 2
-    document.getElementById('resultArea').textContent = `Площа п’ятикутника: ${area.toFixed(2)} кв. одиниць`;
+    document.getElementById('resultArea').textContent = `Площа: ${area.toFixed(2)}`;
 }
-window.onload = calculateArea;
+
+document.getElementById('calculateButton').addEventListener('click', calculateArea);
+
 
 
 function reverseNumber() {
@@ -97,151 +95,88 @@ window.onload = function() {
 
 
 
-// Функция для применения цвета рамки
-function changeBorderColor(color) {
-    const selectedColor = document.getElementById('color-picker').value;
 
-    const blocks = document.querySelectorAll('.number-block');
 
-    blocks.forEach(block => {
-        
-        console.log("123" + block.style.borderColor)
-        
-        block.style.borderColor = selectedColor;
-    });
 
-    console.log("length" +  localStorage.length);
 
-    console.log("selected" +  selectedColor);
 
-    localStorage.setItem('borderColor', selectedColor);
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Функція для відображення/приховування форми
+function toggleForm() {
+    const form = document.getElementById('styleForm');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
 }
 
-// Завантаження збереженого кольору при завантаженні сторінки
-window.onload = () => {
-    const savedColor = localStorage.getItem('borderColor');
+// Функція для збереження стилів
+function saveStyles() {
+    const property = document.getElementById('cssProperty').value;
+    const value = document.getElementById('cssValue').value;
 
- 
-
-
-    if (savedColor) {
-
-        console.log("saved color" + savedColor)
-
-        // Встановлюємо збережений колір як значення color picker
-        document.getElementById('color-picker').value = savedColor;
-
-        // Застосовуємо збережений колір до рамок
-        changeBorderColor(savedColor);
+    if (!property || !value) {
+        alert('Будь ласка, заповніть обидва поля');
+        return;
     }
-};
 
-document.getElementById('apply-color').addEventListener('click', changeBorderColor);
+    // Отримуємо існуючі стилі або створюємо новий об'єкт
+    let savedStyles = JSON.parse(localStorage.getItem('titleStyles')) || {};
+    savedStyles[property] = value;
 
+    // Зберігаємо оновлені стилі
+    localStorage.setItem('titleStyles', JSON.stringify(savedStyles));
 
+    // Застосовуємо стилі до всіх H1 в блоці block-7
+    applyStyles();
 
+    // Очищаємо поля форми
+    document.getElementById('cssProperty').value = '';
+    document.getElementById('cssValue').value = '';
+}
 
+// Функція для видалення стилів
+function removeStyles() {
+    localStorage.removeItem('titleStyles');
+    // Знаходимо всі H1 в блоці block-7
+    const block7 = document.querySelector('.block-7');
+    const headings = block7.querySelectorAll('h1');
 
+    // Видаляємо стилі з кожного H1
+    headings.forEach(heading => {
+        heading.removeAttribute('style');
+    });
+}
 
+// Функція для застосування стилів
+function applyStyles() {
+    const block7 = document.querySelector('.block-7');
+    const headings = block7.querySelectorAll('h1');
+    const savedStyles = JSON.parse(localStorage.getItem('titleStyles')) || {};
 
+    let styleString = '';
+    for (let property in savedStyles) {
+        styleString += `${property}: ${savedStyles[property]}; `;
+    }
 
+    headings.forEach(heading => {
+        heading.style.cssText = styleString;
+    });
+}
 
-
-
-
-
-
-
-
-
-
-
-// Функция для добавления формы при клике на блок 4
-document.getElementById('block-4').addEventListener('click', function() {
-    console.log('Клик по блоку 4. Форма будет добавлена.');
-
-    // Создаём элементы формы
-    var form = document.createElement('form');
-
-    // Создаём и настраиваем элементы формы
-    var labelProperty = document.createElement('label');
-    labelProperty.setAttribute('for', 'cssProperty');
-    labelProperty.innerText = 'Властивість CSS:';
-
-    var inputProperty = document.createElement('input');
-    inputProperty.setAttribute('type', 'text');
-    inputProperty.setAttribute('id', 'cssProperty');
-    inputProperty.setAttribute('placeholder', 'color');
-
-    var labelValue = document.createElement('label');
-    labelValue.setAttribute('for', 'cssValue');
-    labelValue.innerText = 'Значення:';
-
-    var inputValue = document.createElement('input');
-    inputValue.setAttribute('type', 'text');
-    inputValue.setAttribute('id', 'cssValue');
-    inputValue.setAttribute('placeholder', 'red');
-
-    var buttonSave = document.createElement('button');
-    buttonSave.innerText = '1: Зберегти CSS';
-    buttonSave.setAttribute('type', 'button');
-    buttonSave.setAttribute('onclick', 'saveCSSToLocalStorage()');
-
-    var buttonClear = document.createElement('button');
-    buttonClear.innerText = '2: Очистити CSS';
-    buttonClear.setAttribute('type', 'button');
-    buttonClear.setAttribute('onclick', 'clearCSSFromLocalStorage()');
-
-    // Добавляем элементы в форму
-    form.appendChild(labelProperty);
-    form.appendChild(inputProperty);
-    form.appendChild(labelValue);
-    form.appendChild(inputValue);
-    form.appendChild(buttonSave);
-    form.appendChild(buttonClear);
-
-    // Добавляем форму в блок 4
-    document.getElementById('block-4').appendChild(form);
+document.addEventListener('DOMContentLoaded', function() {
+    applyStyles();
 });
-
-// Функция для сохранения CSS в localStorage и применения его
-function saveCSSToLocalStorage() {
-    var cssProperty = document.getElementById('cssProperty').value;
-    var cssValue = document.getElementById('cssValue').value;
-
-    // Логируем данные в консоль для отладки
-    console.log('CSS Property:', cssProperty);
-    console.log('CSS Value:', cssValue);
-
-    // Сохраняем CSS свойство и значение в localStorage
-    localStorage.setItem(cssProperty, cssValue);
-
-    // Применяем это свойство к тегу (например, к блоку 1)
-    document.getElementById('block-1').style[cssProperty] = cssValue;
-
-    alert("CSS збережено");
-}
-
-// Функция для очистки CSS из localStorage
-function clearCSSFromLocalStorage() {
-    // Логируем, что очищаем localStorage
-    console.log('Очищаем CSS из localStorage');
-
-    // Удаляем все CSS-свойства из localStorage
-    localStorage.clear();
-
-    // Сбрасываем стиль для соответствующего тега
-    document.getElementById('block-1').removeAttribute('style');
-
-    alert("CSS очищено");
-}
-
-
-
-
-
-
 
 
 

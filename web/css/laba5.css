@@ -1,97 +1,321 @@
-﻿
-#block1 {
-    position: absolute;
-    right: 0;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: right;
+﻿* {
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
-#block2 {
-    position: absolute;
-    top: 50%;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: left;
+.block-1 {
+    background-color: #0066cc;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    height: 180px;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#block3 {
-    position: absolute;
-    top: 30%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-}
-
-
-#block4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-}
-
-#block5 {
-    position: absolute;
-    top: 80%;
-    right: 0;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: right;
-}
-
-#block6 {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-}
-
-#block7 {
-    position: absolute;
-    top: 90%;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#block-x {
-    position: absolute;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#block-y {
-    position: absolute;
-    right: 0;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: right;
-    top: 88%;
-}
-
-.number-block {
-    padding: 10px;
-    margin: 5px;
+    justify-content: center;
+    align-items: center;
     border: 2px solid #000;
-    border-radius: 5px;
 }
+
+.block-1 h1 {
+    position: absolute;
+    font-size: 24px;
+    right: 10px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.block-x {
+    position: absolute;
+    left: 20px; /* Фиксированное расстояние от левого края */
+    top: 50%; /* Центрирование по вертикали */
+    transform: translateY(-50%); /* Смещение для точного центрирования */
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    height: auto; /* Автоматическая высота для контента */
+    display: flex;
+    flex-direction: column; /* Вертикальное выравнивание содержимого */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 10px; /* Для более плавных углов */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    font-family: Arial, sans-serif; /* Более читаемый шрифт */
+}
+
+.block-x h1 {
+    position: static;
+    color: black;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+
+.block-7 {
+    background-color: #0066cc;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+}
+
+.block-7 h1 {
+    position: absolute;
+    font-size: 24px;
+    left: 10px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+
+.block-y {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+}
+
+.block-y h1 {
+    position: static;
+    color: black;
+    text-align: left;
+    margin: 0;
+    width: 100%;
+}
+
+.block-2 {
+    background-color: #c484ff;
+    position: fixed;
+    top: 180px;
+    width: 600px;
+    height: calc(100vh - 360px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+}
+
+
+/* Блок-5 */
+.block-5 {
+    background-color: #c484ff;
+    position: fixed;
+    top: 180px;
+    right: 0;
+    width: 600px;
+    height: calc(100vh - 360px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    border: 2px solid #000;
+}
+
+/* Контейнер для элементов формы */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Стили для метки */
+.label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Стили для элемента input (цвет) */
+.color-picker {
+    width: 100px;
+    height: 50px;
+}
+
+/* Стили для select */
+.select {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* Кнопка */
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+
+.block-3 {
+    background-color: #81f883;
+    position: fixed;
+    top: 180px;
+    width: calc(100% - 600px);
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    left: 600px;
+    border: 2px solid #000;
+}
+
+.block-3 p {
+    position: static;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.block-4 {
+    background-color: #fff;
+    position: fixed;
+    top: 280px;
+    left: 600px;
+    width: calc(100% - 1200px);
+    height: calc(100vh - 560px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid #000;
+}
+
+.block-4 p {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.block-6 {
+    background-color: #81f883;
+    position: fixed;
+    bottom: 180px;
+    left: 600px;
+    width: calc(100% - 1200px);
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid #000;
+}
+
+.block-6 p {
+    position: static;
+    color: black;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стилі для форми управління CSS */
+.style-form {
+    display: none;
+    padding: 15px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    z-index: 1000;
+    width: 400px;
+}
+
+.property-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.property-input input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    flex: 1;
+}
+
+.btn {
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Кнопка X */
+.block-7 > .btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn.remove {
+    background-color: #dc3545;
+}
+
+.btn.remove:hover {
+    background-color: #c82333;
+}
+
