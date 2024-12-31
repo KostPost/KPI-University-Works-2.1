@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba1", "Laba1\Laba1.csproj", "{239F751B-F3D3-4319-A123-C977CDC27762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba2", "Laba2\Laba2.csproj", "{CCF01C2E-7D46-4DE3-A272-2E3FACBF8292}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{239F751B-F3D3-4319-A123-C977CDC27762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239F751B-F3D3-4319-A123-C977CDC27762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239F751B-F3D3-4319-A123-C977CDC27762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239F751B-F3D3-4319-A123-C977CDC27762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF01C2E-7D46-4DE3-A272-2E3FACBF8292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF01C2E-7D46-4DE3-A272-2E3FACBF8292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF01C2E-7D46-4DE3-A272-2E3FACBF8292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF01C2E-7D46-4DE3-A272-2E3FACBF8292}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
