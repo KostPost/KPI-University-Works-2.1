@@ -13,7 +13,7 @@ class Program
         string inputFilePath = "P:\\KPI-Works 3\\algorithm\\Code\\Laba1\\large_array.txt";
         string outputFilePath = "P:\\KPI-Works 3\\algorithm\\Code\\Laba1\\sorted_large_array.txt";
 
-        GenerateRandomNumbersToFile(inputFilePath, 500);
+        GenerateRandomNumbersToFile(inputFilePath, 50);
 
         int[] array = ReadNumbersFromFile(inputFilePath);
 
@@ -26,17 +26,15 @@ class Program
         stopwatch.Stop();
         Console.WriteLine($"\n Sorting completed in {stopwatch.Elapsed.TotalSeconds} seconds");
 
-        // Если хотите узнать более подробное время, то можно использовать:
         Console.WriteLine($"Total time: {stopwatch.Elapsed.Hours} hours {stopwatch.Elapsed.Minutes} minutes {stopwatch.Elapsed.Seconds} seconds");
     }
     
-    // Метод для генерации случайных чисел и записи в файл
     static void GenerateRandomNumbersToFile(string filePath, int sizeInMb)
     {
         Random random = new Random();
         using (StreamWriter writer = new StreamWriter(filePath))
         {
-            long totalNumbers = sizeInMb * 1024 * 1024 / 4; // 4 байта на одно целое число
+            long totalNumbers = sizeInMb * 1024 * 1024 / 4; 
             for (long i = 0; i < totalNumbers; i++)
             {
                 writer.WriteLine(random.Next(-1000000000, 1000000000));
@@ -45,7 +43,6 @@ class Program
         Console.WriteLine($"Generated file with random numbers at {filePath}");
     }
 
-    // Метод для чтения чисел из файла и их преобразования в массив
     static int[] ReadNumbersFromFile(string filePath)
     {
         string[] lines = File.ReadAllLines(filePath);
@@ -59,7 +56,6 @@ class Program
         return numbers;
     }
 
-    // Метод для записи отсортированных чисел в файл
     static void WriteNumbersToFile(string filePath, int[] array)
     {
         using (StreamWriter writer = new StreamWriter(filePath))
