@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-class Laba1
+class Program
 {
 
     static void Main()

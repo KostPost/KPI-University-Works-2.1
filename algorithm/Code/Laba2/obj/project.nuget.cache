@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RaKoC8I4RosOE1o/JeeXBo9RC4qD20+dNtJ0qPW5tkt7WAwp2sHytiCbmKoy9u8OPt28PF9ArO5nkVXz1r0hTg==",
+  "dgSpecHash": "4R/BpgQoOwvFx3W/0qL3EFmYVWEpLKUvgcuVsjgMMEocMuO51iWKakGWpA2LhO/7shsVovPlcFKPpmbqp8fAEA==",
   "success": true,
   "projectFilePath": "P:\\KPI-Works 3\\algorithm\\Code\\Laba2\\Laba2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\KostPost\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\KostPost\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\KostPost\\.nuget\\packages\\npgsql\\9.0.2\\npgsql.9.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
