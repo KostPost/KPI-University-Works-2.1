@@ -5,7 +5,7 @@ namespace Laba3
         private DenseIndex db;
         private Random random = new Random();
 
-        // Добавляем элементы управления
+        // Элементы управления
         private TextBox txtKey;
         private TextBox txtData;
         private TextBox txtResult;
@@ -15,6 +15,7 @@ namespace Laba3
         private Button btnUpdate;
         private Button btnGenerateData;
         private Button btnTestSearch;
+        private DataGridView gridSearchStats;
         private Label lblKey;
         private Label lblData;
         private Label lblResult;
@@ -44,7 +45,7 @@ namespace Laba3
         private void InitializeCustomComponents()
         {
             this.Text = "Dense Index Database";
-            this.Size = new Size(600, 400);
+            this.Size = new Size(800, 600);
 
             // Labels
             lblKey = new Label
@@ -138,13 +139,42 @@ namespace Laba3
             };
             btnTestSearch.Click += btnTestSearch_Click;
 
+            // Таблица статистики
+            gridSearchStats = new DataGridView
+            {
+                Location = new Point(20, 280),
+                Size = new Size(700, 200),
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                ReadOnly = true
+            };
+            gridSearchStats.Columns.Add("AttemptNumber", "Номер попытки");
+            gridSearchStats.Columns.Add("Comparisons", "Число сравнений");
+            gridSearchStats.Columns.Add("Key", "Ключ");
+            gridSearchStats.Columns.Add("Result", "Результат");
+
             // Добавляем элементы на форму
             this.Controls.AddRange(new Control[] {
                 lblKey, lblData, lblResult,
                 txtKey, txtData, txtResult,
                 btnSearch, btnInsert, btnDelete, btnUpdate,
-                btnGenerateData, btnTestSearch
+                btnGenerateData, btnTestSearch,
+                gridSearchStats
             });
+        }
+
+        private void UpdateSearchStatsGrid()
+        {
+            gridSearchStats.Rows.Clear();
+            var history = db.GetSearchHistory();
+            foreach (var stat in history)
+            {
+                gridSearchStats.Rows.Add(
+                    stat.AttemptNumber,
+                    stat.Comparisons,
+                    stat.Key,
+                    stat.Found ? "Найдено" : "Не найдено"
+                );
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -153,10 +183,13 @@ namespace Laba3
             {
                 try
                 {
-                    var record = db.Search(key);
+                    var (record, stats) = db.Search(key);
                     txtResult.Text = record != null
-                        ? $"Найдено: {record.Data}"
-                        : "Запись не найдена";
+                        ? $"Найдено: {record.Data}\n" +
+                          $"Количество сравнений: {stats.Comparisons}"
+                        : $"Не найдено\n" +
+                          $"Количество сравнений: {stats.Comparisons}";
+                    UpdateSearchStatsGrid();
                 }
                 catch (Exception ex)
                 {
@@ -239,7 +272,7 @@ namespace Laba3
                     try
                     {
                         int key = random.Next(1, 100000);
-                        string data = $"Данные_{key}";
+                        string data = $"Data_{key}";
                         db.Insert(key, data);
                         successCount++;
                     }
@@ -268,12 +301,14 @@ namespace Laba3
                 {
                     int key = random.Next(1, 100000);
                     var startTime = DateTime.Now;
-                    var result = db.Search(key);
+                    var (record, stats) = db.Search(key);
                     var endTime = DateTime.Now;
-                    if (result != null)
+                    if (record != null)
                         successfulSearches++;
                     searchTimes.Add((endTime - startTime).TotalMilliseconds);
                 }
+
+                UpdateSearchStatsGrid();
 
                 double avgTime = searchTimes.Average();
                 txtResult.Text = $"Выполнено {tests} поисков\n" +

@@ -4,36 +4,79 @@ class EightPuzzle
 {
     private int[,] initialState;
     private int[,] goalState;
-    private readonly (int, int)[] moves = { (-1, 0), (1, 0), (0, -1), (0, 1) }; // Вверх, вниз, влево, вправо
+    private readonly (int, int)[] moves = { (-1, 0), (1, 0), (0, -1), (0, 1) }; // Up, Down, Left, Right
+    private DateTime startTime;
+    private const int TIME_LIMIT_MINUTES = 30;
+    private const long MEMORY_LIMIT_BYTES = 1L * 1024 * 1024 * 1024; // 1GB
+    public SearchStatistics Statistics { get; private set; }
 
-    
-    
     public EightPuzzle(int[,] initial, int[,] goal)
     {
         initialState = initial;
         goalState = goal;
+        Statistics = new SearchStatistics();
     }
 
-    
+    private bool IsTimeLimitExceeded()
+    {
+        return (DateTime.Now - startTime).TotalMinutes > TIME_LIMIT_MINUTES;
+    }
+
+    private bool IsMemoryLimitExceeded()
+    {
+        long memoryUsed = GC.GetTotalMemory(false);
+        return memoryUsed > MEMORY_LIMIT_BYTES;
+    }
+
+    // LDFS Implementation
     public List<int[,]> SolveLDFS(int maxDepth)
     {
+        Statistics = new SearchStatistics();
+        startTime = DateTime.Now;
+
         HashSet<string> visited = new HashSet<string>();
         var result = LDFS(initialState, maxDepth, visited, new List<int[,]>());
+
+        Statistics.ExecutionTime = DateTime.Now - startTime;
         return result;
     }
 
     private List<int[,]> LDFS(int[,] currentState, int depth, HashSet<string> visited, List<int[,]> path)
     {
-        if (depth < 0) return null;
+        if (IsTimeLimitExceeded())
+        {
+            Statistics.TimeLimitExceeded = true;
+            return null;
+        }
+
+        if (IsMemoryLimitExceeded())
+        {
+            Statistics.MemoryLimitExceeded = true;
+            return null;
+        }
+
+        if (depth < 0)
+        {
+            Statistics.DeadEnds++;
+            return null;
+        }
 
         string stateStr = StateToString(currentState);
-        if (visited.Contains(stateStr)) return null;
+        if (visited.Contains(stateStr))
+        {
+            Statistics.DeadEnds++;
+            return null;
+        }
 
+        Statistics.GeneratedStates++;
         visited.Add(stateStr);
         path.Add(currentState);
 
+        Statistics.StatesInMemory = Math.Max(Statistics.StatesInMemory, visited.Count);
+
         if (IsGoalState(currentState))
         {
+            Statistics.Steps = path.Count - 1;
             return new List<int[,]>(path);
         }
 
@@ -61,20 +104,40 @@ class EightPuzzle
         return null;
     }
 
-
+    // RBFS Implementation
     public List<int[,]> SolveRBFS(int fLimit)
     {
+        Statistics = new SearchStatistics();
+        startTime = DateTime.Now;
+
         var path = new List<int[,]>();
         var result = RBFS(initialState, 0, fLimit, path);
+
+        Statistics.ExecutionTime = DateTime.Now - startTime;
         return result.success ? path : null;
     }
 
     private (bool success, int fMin) RBFS(int[,] currentState, int g, int fLimit, List<int[,]> path)
     {
+        if (IsTimeLimitExceeded())
+        {
+            Statistics.TimeLimitExceeded = true;
+            return (false, int.MaxValue);
+        }
+
+        if (IsMemoryLimitExceeded())
+        {
+            Statistics.MemoryLimitExceeded = true;
+            return (false, int.MaxValue);
+        }
+
+        Statistics.GeneratedStates++;
         path.Add(currentState);
+        Statistics.StatesInMemory = Math.Max(Statistics.StatesInMemory, path.Count);
 
         if (IsGoalState(currentState))
         {
+            Statistics.Steps = path.Count - 1;
             return (true, g);
         }
 
@@ -96,6 +159,7 @@ class EightPuzzle
 
         if (!successors.Any())
         {
+            Statistics.DeadEnds++;
             path.RemoveAt(path.Count - 1);
             return (false, int.MaxValue);
         }
@@ -107,6 +171,7 @@ class EightPuzzle
 
             if (best.f > fLimit)
             {
+                Statistics.DeadEnds++;
                 path.RemoveAt(path.Count - 1);
                 return (false, best.f);
             }
@@ -123,6 +188,7 @@ class EightPuzzle
         }
     }
 
+    // H1 heuristic - number of misplaced tiles
     private int CalculateHeuristic(int[,] state)
     {
         int misplaced = 0;
@@ -136,25 +202,9 @@ class EightPuzzle
                 }
             }
         }
+
         return misplaced;
     }
-
-    private (int, int) FindPositionInGoalState(int value)
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                if (goalState[i, j] == value)
-                {
-                    return (i, j);
-                }
-            }
-        }
-
-        throw new Exception("Value not found in goal state");
-    }
-
 
     private bool IsGoalState(int[,] state)
     {
@@ -185,7 +235,7 @@ class EightPuzzle
             }
         }
 
-        throw new Exception("Пустая ячейка не найдена");
+        throw new Exception("Empty cell not found");
     }
 
     private bool IsValidPosition(int row, int col)

@@ -13,3 +13,8 @@ P:\KPI-Works 3\algorithm\Code\Laba2\obj\Debug\net8.0\refint\Laba2.dll
 P:\KPI-Works 3\algorithm\Code\Laba2\obj\Debug\net8.0\Laba2.pdb
 P:\KPI-Works 3\algorithm\Code\Laba2\obj\Debug\net8.0\Laba2.genruntimeconfig.cache
 P:\KPI-Works 3\algorithm\Code\Laba2\obj\Debug\net8.0\ref\Laba2.dll
+P:\KPI-Works 3\algorithm\Code\Laba2\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+P:\KPI-Works 3\algorithm\Code\Laba2\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+P:\KPI-Works 3\algorithm\Code\Laba2\bin\Debug\net8.0\Npgsql.dll
+P:\KPI-Works 3\algorithm\Code\Laba2\obj\Debug\net8.0\Laba2.csproj.AssemblyReference.cache
+P:\KPI-Works 3\algorithm\Code\Laba2\obj\Debug\net8.0\Laba2.csproj.Up2Date
