@@ -5,52 +5,96 @@
     <projectFile>Laba2/Laba2.csproj</projectFile>
     <projectFile>Laba3/Laba3.csproj</projectFile>
     <projectFile>Laba4/Laba4.csproj</projectFile>
+    <projectFile>WinFormsApp1/WinFormsApp1.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a0c323-b0c6-4f9f-878b-7654ac03f5bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Laba2/SearchStatistics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Npgsql.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.csproj.Up2Date" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laba3/SearchStatistics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../laba2.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../laba3.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laba3/DataRecord.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laba3/DataService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laba3/MainForm.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laba3/MainForm.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laba4/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Laba3/Laba3/Form1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Laba3/Laba3/IndexEntry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Laba3/Laba3/Laba3.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Laba3/Laba3/Laba3.csproj.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Laba3/Laba3/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Laba3/Laba3/Record.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../~$laba3.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/EightPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/EightPuzzle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Laba2.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Laba2.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Laba2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Laba2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Laba2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Laba2.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Laba2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/bin/Debug/net8.0/Laba2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Code.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba1/obj/Debug/net8.0/Laba1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laba1/obj/Debug/net8.0/Laba1.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba1/obj/Debug/net8.0/Laba1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Laba1/obj/Debug/net8.0/Laba1.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba1/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Laba1/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba1/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Laba1/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/Laba2.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/ref/Laba2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/ref/Laba2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/refint/Laba2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/Debug/net8.0/refint/Laba2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba3/DenseIndex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/DenseIndex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laba3/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba2/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba2/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Laba2/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/DenseIndex.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Laba3/Laba3/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/Form1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/Laba3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/Laba3.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/Record.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/SearchStatistics.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Laba3.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Laba3.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Laba3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Laba3.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Laba3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Laba3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Laba3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Laba3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Laba3.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Laba3.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.EntityFrameworkCore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.Logging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.Options.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/Npgsql.EntityFrameworkCore.PostgreSQL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/bin/Debug/net8.0-windows/System.Diagnostics.DiagnosticSource.dll" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/Laba3.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/ref/Laba3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/ref/Laba3.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/refint/Laba3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Debug/net8.0-windows/refint/Laba3.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../laba1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../laba1.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/Laba3.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Laba3.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/Laba3.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Laba3.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/Laba3.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/Laba3.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba4/obj/Debug/net8.0/Laba4.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Laba4/obj/Debug/net8.0/Laba4.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba4/obj/Debug/net8.0/Laba4.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Laba4/obj/Debug/net8.0/Laba4.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba4/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Laba4/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laba3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../laba3.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Компоненти програмної інженерії/Laba1/.$laba1.drawio.bkp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Компоненти програмної інженерії/Laba1/.$laba1.drawio.dtmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Компоненти програмної інженерії/Laba1/Main scheme.drawio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Компоненти програмної інженерії/Laba1/laba1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Компоненти програмної інженерії/Laba1/laba1.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Компоненти програмної інженерії/Laba1/laba1.drawio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Компоненти програмної інженерії/Laba1/laba1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Компоненти програмної інженерії/Laba1/~$laba1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Компоненти програмної інженерії/Laba1/~WRL0003.tmp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +107,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/9f4b1f5d664afdfc80e1508ab7ed099dff210fbd/src/libraries/System.Private.CoreLib/src/System/Array.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9c49e32632a442218425dd7ff8ebfe3acee910/81/131b0b40/Button.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Laba3/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -78,33 +121,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.Code.executor": "Run",
-    ".NET Project.Laba1.executor": "Run",
-    ".NET Project.Laba2.executor": "Run",
-    ".NET Project.Laba3.executor": "Run",
-    ".NET Project.Laba4.executor": "Run",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.Code.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Laba1.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Laba2.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Laba3.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Laba4.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\KostPost\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\KostPost\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\KostPost\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\KostPost\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\KostPost\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\KostPost\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.Laba3">
     <configuration name="Laba1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Laba1/bin/Debug/net8.0/Laba1.exe" />
@@ -178,7 +221,26 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="WinFormsApp1" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/WinFormsApp1/WinFormsApp1.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue=".NET Project.WinFormsApp1" />
       <item itemvalue=".NET Project.Laba4" />
       <item itemvalue=".NET Project.Laba3" />
       <item itemvalue=".NET Project.Laba1" />
@@ -197,6 +259,8 @@
       <workItem from="1735525929017" duration="11000" />
       <workItem from="1736391419717" duration="4640000" />
       <workItem from="1736396107365" duration="12293000" />
+      <workItem from="1736562008891" duration="1002000" />
+      <workItem from="1736563126135" duration="4109000" />
     </task>
     <servers />
   </component>
@@ -209,6 +273,36 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Laba3/MainForm.cs</url>
+          <line>14</line>
+          <properties documentPath="P:\KPI-Works 3\algorithm\Code\Laba3\MainForm.cs" initialLine="14" containingFunctionPresentation="Constructor 'MainForm'">
+            <startOffsets>
+              <option value="305" />
+            </startOffsets>
+            <endOffsets>
+              <option value="327" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Laba3/DataService.cs</url>
+          <line>14</line>
+          <properties documentPath="P:\KPI-Works 3\algorithm\Code\Laba3\DataService.cs" initialLine="14" containingFunctionPresentation="Method 'InitializeDatabase'">
+            <startOffsets>
+              <option value="338" />
+            </startOffsets>
+            <endOffsets>
+              <option value="390" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Laba2.PuzzleState" memberName="EmptyTileIndex" />
