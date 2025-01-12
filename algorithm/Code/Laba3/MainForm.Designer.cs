@@ -33,6 +33,15 @@ partial class MainForm
 
     private void InitializeComponent()
     {
+        btnMeasure = new Button();
+        btnMeasure.Text = "Виміряти число порівнянь";
+        btnMeasure.Location = new Point(/* ваші координати */);
+        btnMeasure.Click += btnMeasure_Click;
+    
+        Controls.Add(btnMeasure);
+        
+        
+        
         this.txtKey = new System.Windows.Forms.TextBox();
         this.txtData = new System.Windows.Forms.TextBox();
         this.btnSearch = new System.Windows.Forms.Button();

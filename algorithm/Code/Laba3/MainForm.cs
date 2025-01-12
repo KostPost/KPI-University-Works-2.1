@@ -179,4 +179,35 @@ public partial class MainForm : Form
             lblStatus.Text = $"Failed to refresh data: {ex.Message}";
         }
     }
+    
+    
+  
+
+    private void btnMeasure_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            var comparisonTable = dataService.GetSearchComparisonTable();
+            dataGridView.DataSource = comparisonTable;
+            
+            // Налаштування відображення стовпців
+            dataGridView.Columns["Номер спроби пошуку"].Width = 150;
+            dataGridView.Columns["Число порівнянь"].Width = 150;
+            dataGridView.Columns["Шуканий ключ"].Width = 150;
+            
+            // Розрахунок середнього числа порівнянь
+            var rows = comparisonTable.AsEnumerable()
+                .Take(comparisonTable.Rows.Count - 1);
+            
+            var averageComparisons = rows
+                .Average(row => row.Field<int>("Число порівнянь"));
+            
+            lblStatus.Text = $"Середнє число порівнянь: {averageComparisons:F2}";
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Помилка при вимірюванні порівнянь: {ex.Message}", 
+                "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
 }

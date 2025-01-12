@@ -5,9 +5,11 @@ namespace Laba3;
 
 public class DataService : IDisposable
 {
-    private const string ConnectionString = "Host=localhost;Port=5432;Database=homework;Username=postgres;Password=2025";
+    private const string ConnectionString =
+        "Host=localhost;Port=5432;Database=homework;Username=postgres;Password=2025";
+
     public NpgsqlConnection? connection;
-    
+    private int comparisonsCount;
     public void InitializeDatabase()
     {
         try
@@ -22,9 +24,7 @@ public class DataService : IDisposable
         }
     }
 
-    
-    
-    
+
     private void CreateTablesIfNotExist()
     {
         if (connection == null) throw new InvalidOperationException("Database connection not initialized");
@@ -40,7 +40,7 @@ public class DataService : IDisposable
                 record_pointer INTEGER,
                 FOREIGN KEY (record_pointer) REFERENCES data_records(key_id)
             );", connection);
-        
+
         cmd.ExecuteNonQuery();
     }
 
@@ -52,6 +52,7 @@ public class DataService : IDisposable
             {
                 connection.Close();
             }
+
             connection.Dispose();
             connection = null;
         }
@@ -201,14 +202,14 @@ public class DataService : IDisposable
 
         return totalComparisons / (double)numberOfSearches;
     }
-    
-    
+
+
     public DataTable GetAllRecords(int limit = 1000)
     {
         if (connection == null) throw new InvalidOperationException("Database connection not initialized");
 
         var table = new DataTable();
-        
+
         using var command = new NpgsqlCommand(@"
             SELECT d.key_id as ""Key"", 
                    d.data_value as ""Data""
@@ -216,14 +217,131 @@ public class DataService : IDisposable
             INNER JOIN dense_index i ON d.key_id = i.record_pointer
             ORDER BY d.key_id
             LIMIT @limit", connection);
-            
+
         command.Parameters.AddWithValue("@limit", limit);
 
         using var adapter = new NpgsqlDataAdapter(command);
         adapter.Fill(table);
-        
+
         return table;
     }
     
- 
+    
+    
+    public List<SearchAttempt> MeasureSearchComparisons(int numberOfAttempts = 15)
+    {
+        var random = new Random();
+        var results = new List<SearchAttempt>();
+        
+        var existingKeys = GetExistingKeys();
+        
+        for (int i = 0; i < numberOfAttempts; i++)
+        {
+            var randomKey = existingKeys[random.Next(existingKeys.Count)];
+            comparisonsCount = 0;
+            
+            SearchWithComparisons(randomKey);
+            
+            results.Add(new SearchAttempt 
+            { 
+                AttemptNumber = i + 1,
+                Comparisons = comparisonsCount,
+                SearchedKey = randomKey
+            });
+        }
+
+        return results;
+    }
+    
+    
+    private DataRecord? SearchWithComparisons(int key)
+    {
+        comparisonsCount = 0;
+        if (connection == null) throw new InvalidOperationException("Database connection not initialized");
+
+        using var command = new NpgsqlCommand(@"
+        SELECT d.key_id, d.data_value
+        FROM data_records d
+        INNER JOIN dense_index i ON d.key_id = i.record_pointer
+        WHERE d.key_id = @key", connection);
+
+        command.Parameters.AddWithValue("@key", key);
+
+        // Реалізація бінарного пошуку
+        var allKeys = GetExistingKeys();
+        int left = 0;
+        int right = allKeys.Count - 1;
+
+        while (left <= right)
+        {
+            comparisonsCount++; // Збільшуємо лічильник порівнянь
+            int mid = (left + right) / 2;
+        
+            if (allKeys[mid] == key)
+            {
+                using var reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    return new DataRecord
+                    {
+                        Key = reader.GetInt32(0),
+                        Data = reader.GetString(1)
+                    };
+                }
+            }
+        
+            if (allKeys[mid] < key)
+                left = mid + 1;
+            else
+                right = mid - 1;
+        }
+
+        return null;
+    }
+    
+    private List<int> GetExistingKeys()
+    {
+        var keys = new List<int>();
+        if (connection == null) throw new InvalidOperationException("Database connection not initialized");
+
+        using var command = new NpgsqlCommand("SELECT key_id FROM data_records ORDER BY key_id", connection);
+        using var reader = command.ExecuteReader();
+        
+        while (reader.Read())
+        {
+            keys.Add(reader.GetInt32(0));
+        }
+        
+        return keys;
+    }
+
+    public DataTable GetSearchComparisonTable(int attempts = 15)
+    {
+        var results = MeasureSearchComparisons(attempts);
+        var table = new DataTable();
+    
+        // Визначаємо колонки з правильними типами
+        table.Columns.Add("Номер спроби пошуку", typeof(string));
+        table.Columns.Add("Число порівнянь", typeof(int));  // змінюємо назад на int
+        table.Columns.Add("Шуканий ключ", typeof(string));
+    
+        // Додаємо результати пошуку
+        foreach (var result in results)
+        {
+            table.Rows.Add(
+                result.AttemptNumber.ToString(),
+                result.Comparisons,  // залишаємо як int
+                result.SearchedKey.ToString()
+            );
+        }
+
+        // Обчислюємо середнє значення
+        int avgComparisons = (int)Math.Round(results.Average(r => r.Comparisons));
+    
+        // Додаємо рядок із середнім значенням
+        table.Rows.Add("Середнє", avgComparisons, "-");
+    
+        return table;
+    }
+    
 }

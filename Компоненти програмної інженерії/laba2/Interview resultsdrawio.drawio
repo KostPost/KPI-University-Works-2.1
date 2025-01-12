@@ -1,0 +1,124 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.1 Chrome/128.0.6613.186 Electron/32.2.6 Safari/537.36" version="25.0.1">
+  <diagram name="Page-1" id="s1G-mKYS3tRJ_GC2DI_S">
+    <mxGraphModel dx="842" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-2" value="" style="rounded=1;whiteSpace=wrap;html=1;flipH=0;flipV=1;container=0;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="149" y="300" width="430" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-3" value="" style="line;strokeWidth=1;rotatable=0;dashed=0;labelPosition=right;align=left;verticalAlign=middle;spacingTop=0;spacingLeft=6;points=[];portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="151.5" y="340" width="425" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-4" value="&lt;b&gt;Результати інтерв&#39;ю&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="294" y="310" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-5" value="&lt;b&gt;Номер інтерв&#39;ю:&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="352" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-6" value="&lt;b&gt;Назва інтерв&#39;ю:&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="382" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-7" value="&lt;b&gt;Посадова позиція:&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="440" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-8" value="&lt;b&gt;Інтерв&#39;юер:&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="470" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-9" value="&lt;b&gt;Дата проведення:&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="500" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-10" value="&lt;b&gt;Поточний статус: &lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="530" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-12" value="2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="358" width="30" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-13" value="Технічне інтерв&#39;ю" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="388" width="160" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-14" value="Ткаченко К.О" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="418" width="160" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-15" value="Middle Java Developer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="446" width="160" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-16" value="Петров П.П." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="476" width="160" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-17" value="&lt;b&gt;Прізвище кандидата&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="412" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-18" value="12.01.2025" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="506" width="160" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-19" value="▼ Завершено" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="536" width="160" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-20" value="" style="line;strokeWidth=1;rotatable=0;dashed=0;labelPosition=right;align=left;verticalAlign=middle;spacingTop=0;spacingLeft=6;points=[];portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="149" y="554" width="430" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-21" value="&lt;b&gt;Характеристики кандидата&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="566" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-23" value="&lt;b&gt;№&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="149" y="600" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-25" value="&lt;b&gt;Характеристика&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="189" y="600" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-26" value="&lt;b&gt;Значення&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="384" y="600" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-28" value="&lt;b&gt;1&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="149" y="640" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-29" value="Спеціальність по диплому" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="189" y="640" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-30" value="Комп&#39;ютерні науки" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="384" y="640" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-31" value="&lt;b&gt;2&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="149" y="680" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-32" value="Рік закінчення університет" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="189" y="680" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-33" value="2020" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="384" y="680" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-34" value="&lt;b&gt;3&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="149" y="720" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-35" value="Досвід роботи (років)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="189" y="720" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-36" value="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="384" y="720" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-37" value="&lt;b&gt;4&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="149" y="760" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-38" value="Знання мов програмування" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="189" y="760" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-39" value="Java, Python, JavaScript" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="384" y="760" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-40" value="&lt;b&gt;5&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="149" y="800" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-41" value="Знання англійської мови" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="189" y="800" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-42" value="B2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="384" y="800" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gd7E2B8C0Dgd-W5UGcCu-44" value="&lt;span&gt;Інструкції:&#xa;&lt;/span&gt;&lt;span&gt;- Подвійний клік на значенні відкриває поле для редагування&#xa;&lt;/span&gt;&lt;span&gt;- Enter для збереження введеного значення&#xa;&lt;/span&gt;&lt;span&gt;- Всі поля в таблиці доступні для редагування&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="189" y="920" width="370" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
