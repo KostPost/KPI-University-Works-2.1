@@ -56,18 +56,14 @@ function reverseNumber() {
         let reversed = num.split('').reverse().join('');
         alert("Перевернуте число: " + reversed);
 
-        // Зберігаємо результат у cookies
         document.cookie = "reversedNumber=" + reversed + ";path=/";
 
-        // Ховаємо форму після обробки
         document.getElementById("inputForm").style.display = "none";
 
-        // Перевірка наявності cookies при завантаженні сторінки
         showCookieMessage();
     }
 }
 
-// Функція для перевірки наявності cookies і показу повідомлення
 function showCookieMessage() {
     let cookies = document.cookie.split(';');
     let reversedCookie = cookies.find(cookie => cookie.trim().startsWith('reversedNumber='));
@@ -76,18 +72,15 @@ function showCookieMessage() {
         let result = reversedCookie.split('=')[1];
         alert("Дані в cookies: " + result + "\nПісля натискання кнопки «ОК» дані будуть видалені.");
 
-        // Видалення cookies після натискання «ОК»
         document.cookie = "reversedNumber=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
 
-        // Показуємо повідомлення про видалення
         setTimeout(() => {
             alert("Cookies видалено!");
-            location.reload(); // Перезавантажуємо сторінку після видалення cookies
+            location.reload(); 
         }, 100);
     }
 }
 
-// При завантаженні сторінки перевіряємо наявність cookies
 window.onload = function() {
     showCookieMessage();
 };
@@ -97,30 +90,11 @@ window.onload = function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Функція для відображення/приховування форми
 function toggleForm() {
     const form = document.getElementById('styleForm');
     form.style.display = form.style.display === 'none' ? 'block' : 'none';
 }
 
-// Функція для збереження стилів
 function saveStyles() {
     const property = document.getElementById('cssProperty').value;
     const value = document.getElementById('cssValue').value;
@@ -130,35 +104,27 @@ function saveStyles() {
         return;
     }
 
-    // Отримуємо існуючі стилі або створюємо новий об'єкт
     let savedStyles = JSON.parse(localStorage.getItem('titleStyles')) || {};
     savedStyles[property] = value;
 
-    // Зберігаємо оновлені стилі
     localStorage.setItem('titleStyles', JSON.stringify(savedStyles));
 
-    // Застосовуємо стилі до всіх H1 в блоці block-7
     applyStyles();
 
-    // Очищаємо поля форми
     document.getElementById('cssProperty').value = '';
     document.getElementById('cssValue').value = '';
 }
 
-// Функція для видалення стилів
 function removeStyles() {
     localStorage.removeItem('titleStyles');
-    // Знаходимо всі H1 в блоці block-7
     const block7 = document.querySelector('.block-7');
     const headings = block7.querySelectorAll('h1');
 
-    // Видаляємо стилі з кожного H1
     headings.forEach(heading => {
         heading.removeAttribute('style');
     });
 }
 
-// Функція для застосування стилів
 function applyStyles() {
     const block7 = document.querySelector('.block-7');
     const headings = block7.querySelectorAll('h1');
@@ -184,4 +150,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+
+function changeBorderColor() {
+    const selectedColor = document.getElementById('colorPicker').value;
+    const selectedBlock = document.getElementById('blockSelect').value;
+
+    if (selectedBlock === 'all') {
+        const blocks = document.querySelectorAll('[class^="block-"]');
+        blocks.forEach(block => {
+            block.style.borderColor = selectedColor;
+        });
+    }
+
+    localStorage.setItem('borderColor', selectedColor);
+    console.log('Сохранен цвет:', selectedColor);
+}
+
+window.onload = () => {
+    const savedColor = localStorage.getItem('borderColor');
+
+    if (savedColor) {
+        console.log('Загружен сохраненный цвет:', savedColor);
+        document.getElementById('colorPicker').value = savedColor;
+        changeBorderColor();
+    }
+
+    document.getElementById('confirmColor').addEventListener('click', changeBorderColor);
+};
 
