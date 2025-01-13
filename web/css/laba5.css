@@ -33,21 +33,21 @@ body {
 
 .block-x {
     position: absolute;
-    left: 20px; /* Фиксированное расстояние от левого края */
-    top: 50%; /* Центрирование по вертикали */
-    transform: translateY(-50%); /* Смещение для точного центрирования */
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: white;
     padding: 20px;
     width: 300px;
-    height: auto; /* Автоматическая высота для контента */
+    height: auto;
     display: flex;
-    flex-direction: column; /* Вертикальное выравнивание содержимого */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 2px solid #000;
-    border-radius: 10px; /* Для более плавных углов */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
-    font-family: Arial, sans-serif; /* Более читаемый шрифт */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
 }
 
 .block-x h1 {
@@ -57,7 +57,6 @@ body {
     margin: 0;
     width: 100%;
 }
-
 
 .block-7 {
     background-color: #0066cc;
@@ -82,7 +81,6 @@ body {
     color: white;
     margin: 0;
 }
-
 
 .block-y {
     position: absolute;
@@ -120,8 +118,6 @@ body {
     border: 2px solid #000;
 }
 
-
-/* Блок-5 */
 .block-5 {
     background-color: #c484ff;
     position: fixed;
@@ -137,7 +133,6 @@ body {
     border: 2px solid #000;
 }
 
-/* Контейнер для элементов формы */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -145,25 +140,21 @@ body {
     gap: 10px;
 }
 
-/* Стили для метки */
 .label {
     color: white;
     margin-bottom: 5px;
 }
 
-/* Стили для элемента input (цвет) */
 .color-picker {
     width: 100px;
     height: 50px;
 }
 
-/* Стили для select */
 .select {
     padding: 5px;
     margin-top: 10px;
 }
 
-/* Кнопка */
 .button {
     background-color: #4CAF50;
     color: white;
@@ -180,7 +171,6 @@ body {
 .button:hover {
     background-color: #45a049;
 }
-
 
 .block-3 {
     background-color: #81f883;
@@ -247,20 +237,6 @@ body {
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Стилі для форми управління CSS */
 .style-form {
     display: none;
     padding: 15px;
@@ -299,7 +275,6 @@ body {
     transition: background-color 0.3s;
 }
 
-/* Кнопка X */
 .block-7 > .btn {
     position: absolute;
     bottom: 10px;
@@ -318,4 +293,3 @@ body {
 .btn.remove:hover {
     background-color: #c82333;
 }
-
