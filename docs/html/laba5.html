@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приклад сторінки</title>
+    <link rel="stylesheet" href="../css/laba5.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="block-1">
+        <h1>
+            <button id="swapButton">Swap Blocks</button>
+        </h1>
+        <div class="block-x">
+            <h3>Розрахунок площі правильного п’ятикутника</h3>
+            <label for="sideLengthInput"></label><input id="sideLengthInput" type="number"
+                                                        placeholder="Введіть сторону п’ятикутника"/>
+            <button id="calculateButton">Розрахувати площу</button>
+        </div>
+
+    </div>
+
+
+    <div id="block2" class="block-2">
+        <form id="inputForm" onsubmit="reverseNumber(); return false;">
+
+            <button type="submit"
+                    style="padding: 5px 10px; cursor: pointer;">
+                Перевернути число
+            </button>
+        </form>
+    </div>
+
+    <div class="block-3">
+        <p>Ми спеціалізуємось на створенні інноваційних рішень для бізнесу. Наша команда професіоналів готова допомогти
+            вам досягти нових висот у вашій галузі.</p>
+    </div>
+
+    <div class="block-4">
+
+        <p><label for="numberInput"></label><input type="number"
+                                                   id="numberInput"
+                                                   placeholder="Введіть натуральне число"
+                                                   required
+                                                   min="1"
+                                                   style="padding: 5px; margin-right: 10px;"></p>
+
+        <p id="resultArea">Площа: 0</p>
+    </div>
+
+    <div id="block5" class="block-5">
+        <div class="form-container">
+            <label for="colorPicker" class="label">Виберіть колір рамки:</label>
+            <input type="color" id="colorPicker" value="#000000" class="color-picker">
+            <label for="blockSelect"></label>
+            <select id="blockSelect" class="select">
+                <option value="all">Всі блоки</option>
+            </select>
+            <b>
+                <button id="confirmColor" class="button">
+                    Підтвердити
+                </button>
+            </b>
+        </div>
+    </div>
+
+
+
+    <div class="block-6">
+        <p>Ми використовуємо передові технології та інноваційні рішення для досягнення максимальних результатів. Наша
+            команда постійно вдосконалює свої навички.</p>
+    </div>
+
+    <div class="block-7">
+        <button onclick="toggleForm()" class="btn">x</button>
+
+        <div id="styleForm" class="style-form">
+            <div class="property-input">
+                <label for="cssProperty"></label><input type="text" id="cssProperty" placeholder="CSS властивість">
+                <label for="cssValue"></label><input type="text" id="cssValue" placeholder="Значення">
+            </div>
+            <button onclick="saveStyles()" class="btn">1</button>
+            <button onclick="removeStyles()" class="btn remove">2</button>
+        </div>
+
+        <div class="block-y">
+            <h1>Разом до успіху!</h1>
+        </div>
+    </div>
+</div>
+
+<script src="../laba5.js"></script>
+
+</body>
+</html>
