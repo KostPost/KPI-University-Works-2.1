@@ -88,7 +88,6 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Mobile styles */
 @media (max-width: 600px) {
     .container {
         grid-template-areas:
